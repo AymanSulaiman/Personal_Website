@@ -1,374 +1,113 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>portfolio</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <!-- Place favicon.ico in the root directory -->
-    
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/gijgo.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
-
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- header-start -->
-    <header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-2">
-                            <div class="logo">
-                                <a href="{{ url_for('index') }}">
-                                    <img src="{{ url_for('static', filename='img/logo.png')}}" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xl-9 col-lg-10">
-                            <div class="main-menu  d-none d-lg-block text-right">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a class="active" href="{{ url_for('index') }}">home</a></li>
-                                        <li><a href="{{ url_for('about') }}">About</a></li>
-                                        
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="{{ url_for('blog') }}">blog</a></li>
-                                                <li><a href="{{ url_for('single_blog') }}">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                    <li><a href="{{ url_for('portfolio_work') }}">Portfolio work</a></li>
-                                                 <li><a href="{{ url_for('work_details') }}">work details</a></li>
-                                                 <li><a href="{{ url_for('services') }}">Services</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Ayman Sulaiman|Data Scientist</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet">
+        <!-- Fonts CSS-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/heading.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/body.css')}}">
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+            <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Ayman Sulaiman</a>
+                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- header-end -->
-
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="single_slider  d-flex align-items-center slider_bg_1">
-            <div class="outline_text d-none d-lg-block">
-                    Portfolio
+        </nav>
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="{{ url_for('static', filename='assets/img/me.png')}}" alt="">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">Data Scientist</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Data Science | Machine Learning Engineer | Data Engineer</p>
             </div>
+        </header>
+        <section class="page-section portfolio" id="portfolio">
             <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-                            <span>Hello Everyone</span>
-                            <h3>
-                                    World class consumer and trends research capabilities we design for tomorrow customers in tomorrow’s markets.
-                            </h3>
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">PORTFOLIO</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Items-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="{{ url_for('static', filename='assets/img/portfolio/Project1.png')}}" alt="Superconductor Analysis and Prediction"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="{{ url_for('static', filename='assets/img/portfolio/Project2.png')}}" alt="Horse Racing Informatics"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div><img class="img-fluid" src="{{ url_for('static', filename='assets/img/portfolio/project 3.png')}}" alt="COVID-19 ETL"/>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- slider_area_end -->
-
-
-    <div class="portfolio_area">
-        <!-- <div class="container-fluid p-0"> -->
-            <div class="portfolio_wrap">
-                <div class=" single_gallery">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/1.png')}}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                        <div class="hover_inner">
-                                <span>Mobile App</span>
-                                <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                                
-                        </div>
-                    </div>
-                </div>
-                <div class="single_gallery small_width">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/2.png')}}" alt="">
-                    <div class="gallery_hover">
-                            <div class="hover_inner">
-                                    <span>Mobile App</span>
-                                    <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                            </div>
-                        </div>
-                </div>
-                <div class="single_gallery">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/3.png')}}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                            <div class="hover_inner">
-                                    <span>Mobile App</span>
-                                    <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                            </div>
-                        </div>
-                </div>
-                <div class=" single_gallery">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/4.png')}}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                            <div class="hover_inner">
-                                    <span>Mobile App</span>
-                                    <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                            </div>
-                        </div>
-                </div>
-                <div class="single_gallery">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/5.png')}}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                            <div class="hover_inner">
-                                    <span>Mobile App</span>
-                                    <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                            </div>
-                        </div>
-                </div>
-                <div class=" single_gallery small_width">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/6.png')}}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                            <div class="hover_inner">
-                                    <span>Mobile App</span>
-                                    <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                            </div>
-                        </div>
-                </div>
-                <div class="single_gallery">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/7.png')}}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                            <div class="hover_inner">
-                                    <span>Mobile App</span>
-                                    <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                            </div>
-                        </div>
-                </div>
-                <div class=" single_gallery small_width">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/8.png')}}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                            <div class="hover_inner">
-                                    <span>Mobile App</span>
-                                    <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                            </div>
-                        </div>
-                </div>
-                <div class=" single_gallery">
-                    <div class="thumb">
-                        <img src="{{ url_for('static', filename='img/portfolio/9.png')}}" alt="">
-                    </div>
-                    <div class="gallery_hover">
-                            <div class="hover_inner">
-                                    <span>Mobile App</span>
-                                    <a href="{{ url_for('work_details')}}"> <h3>Ubar Mobile App</h3></a>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        <!-- </div> -->
-        <div class="more_works text-center">
-            <a href="portfolio-work.html">More Works</a>
-        </div>
-    </div>
-
-
-    <!-- service_area  -->
-    <div class="service_area">
-            <div class="outline_text white d-none d-lg-block">
-                    Services
-            </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_service">
-                        <div class="icon">
-                            <img src="{{ url_for('static', filename='img/svg_icon/1.svg')}}" alt="">
-                        </div>
-                        <h3>Machine Learning</h3>
-                        <p>A wonderful serenity has taken to the  <br> possession of my entire soul network <br> infrastructure, including consolidation of <br> established network designed and</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_service">
-                        <div class="icon">
-                            <img src="{{ url_for('static', filename='img/svg_icon/2.svg')}}" alt="">
-                        </div>
-                        <h3>Data Science</h3>
-                        <p>A wonderful serenity has taken to the  <br> possession of my entire soul network <br> infrastructure, including consolidation of <br> established network designed and</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="single_service">
-                        <div class="icon">
-                            <img src="{{ url_for('static', filename='img/svg_icon/3.svg')}}" alt="">
-                        </div>
-                        <h3>Data Analysis</h3>
-                        <p>A wonderful serenity has taken to the  <br> possession of my entire soul network <br> infrastructure, including consolidation of <br> established network designed and</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ service_area  -->
-
-    <div class="creative_blog_area">
-            <div class="outline_text blog d-none d-lg-block ">
-                    Blog
-            </div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-9 col-md-6">
-                    <div class="blog_title">
-                        <h3>Our Creative Articles</h3>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="more_blog">
-                        <a href="#" class="boxed-btn3">More Blogs</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="creative_blog_active owl-carousel">
-                        <div class="single_blog">
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="{{ url_for('static', filename='img/creative_blog/1.png')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="blog_content">
-                                <a href="#">
-                                    <span class="date">October 19, 2019</span>
-                                </a>
-                                <a href="#">
-                                    <h3>Industry as their over draft</h3>
-                                </a>
-                                <div class="owner_info">
-                                    <div class="author_thumb">
-                                        <img src="{{ url_for('static', filename='img/creative_blog/author2.png')}}" alt="">
+        </section>
+        <!-- Portfolio Modal-->
+        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Superconductor Analysis and Prediction</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
                                     </div>
-                                    <div class="info">
-                                        <a href="#"><h4>Mesica Chouhan</h4></a>
-                                        <p>Business Owner</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_blog">
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="{{ url_for('static', filename='img/img/creative_blog/2.png')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="blog_content">
-                                <a href="#">
-                                    <span class="date">October 19, 2019</span>
-                                </a>
-                                <a href="#">
-                                    <h3>Construction their over draft</h3>
-                                </a>
-                                <div class="owner_info">
-                                    <div class="author_thumb">
-                                        <img src="{{ url_for('static', filename='img/creative_blog/author3.png')}}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <a href="#"><h4>Mesica Chouhan</h4></a>
-                                        <p>Business Owner</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_blog">
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="{{ url_for('static', filename='img/creative_blog/3.png')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="blog_content">
-                                <a href="#">
-                                    <span class="date">October 19, 2019</span>
-                                </a>
-                                <a href="#">
-                                    <h3>Industry as their over draft</h3>
-                                </a>
-                                <div class="owner_info">
-                                    <div class="author_thumb">
-                                        <img src="{{ url_for('static', filename='img/creative_blog/author.png')}}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <a href="#"><h4>Mesica Chouhan</h4></a>
-                                        <p>Business Owner</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_blog">
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="{{ url_for('static', filename='img/creative_blog/4.png')}}" alt="">
-                                </a>
-                            </div>
-                            <div class="blog_content">
-                                <a href="#">
-                                    <span class="date">October 19, 2019</span>
-                                </a>
-                                <a href="#">
-                                    <h3>Industry as their over draft</h3>
-                                </a>
-                                <div class="owner_info">
-                                    <div class="author_thumb">
-                                        <img src="{{ url_for('static', filename='img/creative_blog/author.png')}}" alt="">
-                                    </div>
-                                    <div class="info">
-                                        <a href="#"><h4>Mesica Chouhan</h4></a>
-                                        <p>Business Owner</p>
-                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <a href="https://github.com/AymanSulaiman/superconductor-analysis-and-prediction" target="_blank">
+                                        <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='assets/img/portfolio/Project1.png')}}" alt="Superconductor Analysis and Prediction"/>
+                                    </a>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">Superconductivity is a phenomenon where a charge can move through a material without any resistance. This allows electricity to be conducted at maximum efficiency.  TensorFlow was used to make an accurate Neural Network.</p>
+                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
                                 </div>
                             </div>
                         </div>
@@ -376,193 +115,179 @@
                 </div>
             </div>
         </div>
-
-    </div>
-
-    <!-- testimonial_area  -->
-    <div class="testimonial_area ">
-            <div class="outline_text white testmonial d-none d-lg-block">
-                    Testimonial
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Horse Racing Informatics</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <a href="https://github.com/AymanSulaiman/stallion-statistics-dashboard" target="_blank">
+                                        <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='assets/img/portfolio/Project2.png')}}" alt="Horse Racing Informatics"/>
+                                    </a>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">Our goal as a team is the provide racing insights on both previous and upcoming races for the Churchill Downs racetrack. Even more in depth, using different programming languages and machine learning, we have created multiple ML models. These models can predict whether a horse is going to win or lose.</p>
+                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal2Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">COVID-19 ETL</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <a href="https://github.com/AymanSulaiman/Covid19-ETL-Project" target="_blank">
+                                        <img class="img-fluid rounded mb-5" src="{{ url_for('static', filename='assets/img/portfolio/project 3.png')}}" alt="COVID-19 ETL"/>
+                                    </a>
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-5">Based upon the data compiled by John Hopkins University, we want to explore the timeline and the data of COVID-19. </p>
+                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block text-white">ABOUT</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <p class="pre-wrap lead">I am a Data Scientist with Dual Citizenship (US and UK) and I thrive in Data Science.  I have made Dashboards for AI, and Machine Learning Projects. I have a background in Data Analytics and Ready to work.</p>
+                    </div>
+                    <div class="col-lg-4 mr-auto">
+                        <p class="pre-wrap lead">Python 3, HTML 5, CSS 3, JS, SQL, D3.js, Leaflet, Streamlit, Tableau, Jupyter, Seaborn, Matplotlib, Plotly, TensorFlow, Sci-kit Learn, AWS, Spark, MongoDB, Postgres, Beautiful Soup, Splinter, Selenium, Multivariate Calculus, Statistics</p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <!-- About Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block text-white">Freelance Work</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <p class="pre-wrap lead">I am available for Freelance work within Data Science, Data Engineering and Machine Learning. Collaborating </p>
+                    </div>
+                    <div class="col-lg-4 mr-auto">
+                        <p class="pre-wrap lead">Python 3, HTML 5, CSS 3, JS, SQL, D3.js, Leaflet, Streamlit, Tableau, Jupyter, Seaborn, Matplotlib, Plotly, TensorFlow, Sci-kit Learn, AWS, Spark, MongoDB, Postgres, Beautiful Soup, Splinter, Selenium, Multivariate Calculus, Statistics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Content-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="text-muted">Phone</div>
+                            <div class="lead font-weight-bold">(626)-636-8540</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                            <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:saymansulaiman@gmail.com">saymansulaiman@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer text-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-12">
-                        <div class="testmonial_active owl-carousel">
-                            <div class="single_carousel">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-6">
-                                        <div class="single_testmonial text-center">
-                                                <div class="thumb">
-                                                        <img src="{{ url_for('static', filename='img/testmonial/thumb.png')}}" alt="">
-                                                </div>
-                                            <p>Innovative brewing methods and our coffee is sourced from various parts of the globe and are roasted to perfection. </p>
-                                            <div class="testmonial_author">
-                                                <h3>Mesica Chouhan</h3>
-                                                <span>Mesica Chouhan</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single_carousel">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-6">
-                                        <div class="single_testmonial text-center">
-                                                <div class="thumb">
-                                                        <img src="{{ url_for('static', filename='img/testmonial/thumb.png')}}" alt="">
-                                                </div>
-                                            <p>Innovative brewing methods and our coffee is sourced from various parts of the globe and are roasted to perfection. </p>
-                                            <div class="testmonial_author">
-                                                <h3>Mesica Chouhan</h3>
-                                                <span>Mesica Chouhan</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single_carousel">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-6">
-                                        <div class="single_testmonial text-center">
-                                                <div class="thumb">
-                                                        <img src="{{ url_for('static', filename='img/testmonial/thumb.png')}}" alt="">
-                                                </div>
-                                            <p>Innovative brewing methods and our coffee is sourced from various parts of the globe and are roasted to perfection. </p>
-                                            <div class="testmonial_author">
-                                                <h3>Mesica Chouhan</h3>
-                                                <span>Mesica Chouhan</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="mb-4">LOCATION</h4>
+                        <p class="pre-wrap lead mb-0">Los Angeles
+California
+91106</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    <!-- /testimonial_area  -->
-    
-    <!-- discuss_projects_start  -->
-    <div class="discuss_projects">
-            <div class="outline_text white project d-none d-lg-block">
-                    Let’s talk
-            </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="project_text text-center">
-                        <h3>Let’s start your project with us</h3>
-                        <a class="boxed-btn3" href="#">Start Talking</a>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="mb-4"></h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- discuss_projects_end  -->
-
-    <!-- footer start -->
-    <footer class="footer">
-            <div class="footer_top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 col-md-6 col-lg-4">
-                            <div class="footer_widget">
-                               <div class="logo_footer">
-                                   <a href="index.html">
-                                       <img src="img/logo.png" alt="">
-                                   </a>
-                               </div>
-    
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-lg-3">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Services
-                                </h3>
-                                <ul>
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">3D Modeling</a></li>
-                                    <li><a href="#">Architectural Design</a></li>
-                                </ul>
-    
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-lg-3">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                    Useful Links
-                                </h3>
-                                <ul>
-                                    <li><a href="#">Work</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-md-6 col-lg-2">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Follow Us
-                                </h3>
-                                <ul>
-                                    <li><a href="#">Dribbble</a></li>
-                                    <li><a href="#">Behance</a></li>
-                                    <li><a href="#">Instagram</a></li>
-                                    <li><a href="#">Facebook</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copy-right_text">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <p class="copy_right text-center">
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="mb-4">Other Links</h4>
+                        <p class="pre-wrap lead mb-0"><a href="https://www.linkedin.com/in/s-ayman-sulaiman/" target="_blank">LinkedIn</a>
+<a href="https://github.com/AymanSulaiman" target="_blank">GitHub</a>
+ <a href="https://medium.com/@Data_Sleuth" target="_blank">Blog</a></p>
                     </div>
                 </div>
             </div>
         </footer>
-    <!--/ footer end  -->
-
-    <!-- {{ url_for('static', filename='js/')}} -->
-    <!-- JS here -->
-    <script src="{{ url_for('static', filename='js/vendor/modernizr-3.5.0.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/popper.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/owl.carousel.min.js')}}js/"></script>
-    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/ajax-form.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/waypoints.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.counterup.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/scrollIt.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.scrollUp.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/wow.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/nice-select.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.slicknav.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/plugins.js')}}"></script>
-    <script src="{{ url_for('static', filename='js/gijgo.min.js')}}"></script>
-
-    <!--contact js-->
-    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.form.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/jquery.validate.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/mail-script.js') }}"></script>
-
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
-
+        <!-- Copyright Section-->
+        <section class="copyright py-4 text-center text-white">
+            <div class="container"><small class="pre-wrap">Copyright © Ayman Sulaiman 2020 </small></div>
+        </section>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="{{ url_for('static', filename='assets/mail/jqBootstrapValidation.js')}}"></script>
+        <script src="{{ url_for('static', filename='assets/mail/contact_me.js')}}"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+    </body>
 </html>
